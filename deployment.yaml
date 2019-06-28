@@ -34,17 +34,17 @@ spec:
         image: ${CICD_IMAGE}:${CICD_PIPELINE_ID}-${CICD_EXECUTION_SEQUENCE}
         ports:
         - containerPort: 80
-## Ingress example
-#---
-#apiVersion: extensions/v1beta1
-#kind: Ingress
-#metadata:
-#  name: react-web
-#spec:
-#  rules:
-#  - host: react-web.172.31.0.179.nip.io
-#    http:
-#      paths:
-#      - backend:
-#          serviceName: react-web-service
-#          servicePort: 80
+# Ingress example
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: react-web
+spec:
+  rules:
+  - host: react-web.192.168.84.151.nip.io
+    http:
+      paths:
+      - backend:
+         serviceName: react-web-service
+         servicePort: 80
